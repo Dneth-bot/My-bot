@@ -63,7 +63,7 @@ async function ensureSessionFile() {
 }
 
 async function connectToWA() {
-  console.log("Connecting DANUWA-MD 🧬...");
+  console.log("Connecting DINETH_MD 🧬...");
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, '/auth_info_baileys/'));
   const { version } = await fetchLatestBaileysVersion();
 
@@ -85,7 +85,7 @@ async function connectToWA() {
         connectToWA();
       }
     } else if (connection === 'open') {
-      console.log('✅ DANUWA-MD connected to WhatsApp');
+      console.log('✅ DINETH_MD connected to WhatsApp');
 
       const up = `DANUWA-MD connected ✅\n\nPREFIX: ${prefix}`;
       await danuwa.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
@@ -179,7 +179,7 @@ async function connectToWA() {
 ensureSessionFile();
 
 app.get("/", (req, res) => {
-  res.send("Hey, DANUWA-MD started✅");
+  res.send("Hey, DINETH_MD started✅");
 });
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
